@@ -1,0 +1,48 @@
+<nav class="navigation">
+  <div class="navigation__container">
+    <label class="navigation__menu-toggle" for="menu"><span class="cross"></span></label>
+    <div class="navigation__search">
+      <input class="navigation__search-field" type="search" placeholder="Search docs">
+    </div>
+    <div class="navigation__category">Project</div>
+    <ul class="navigation__link-list">
+      {% for link in site.nav.Project %}
+        <li class="navigation__link-list-item{% if current_url == link.url %} navigation__link-list-item--active{% endif %}{% unless link.available %} navigation__link-list-item--unavailable{% endunless %}">
+          <a class="navigation__link-list-link{% if current_url == link.url %} navigation__link-list-link--active{% endif %}" href="{{ link.url | prepend: site.baseurl }}">
+            {{ link.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="navigation__category">Documentation</div>
+    <ul class="navigation__link-list">
+      {% for link in site.nav.Documentation %}
+        <li class="navigation__link-list-item{% if current_url == link.url %} navigation__link-list-item--active{% endif %}{% unless link.available %} navigation__link-list-item--unavailable{% endunless %}">
+          <a class="navigation__link-list-link{% if current_url == link.url %} navigation__link-list-link--active{% endif %}" href="{{ link.url | prepend: site.baseurl }}">
+            {{ link.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="navigation__category">Developers</div>
+    <ul class="navigation__link-list">
+      {% for link in site.nav.Developers %}
+        <li class="navigation__link-list-item{% if current_url == link.url %} navigation__link-list-item--active{% endif %}{% unless link.available %} navigation__link-list-item--unavailable{% endunless %}">
+          <a class="navigation__link-list-link{% if current_url == link.url %} navigation__link-list-link--active{% endif %}" href="{{ link.url | prepend: site.baseurl }}">
+            {{ link.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="navigation__category">Other</div>
+    <ul class="navigation__link-list">
+      {% for link in site.nav.Other %}
+        <li class="navigation__link-list-item{% if current_url == link.url %} navigation__link-list-item--active{% endif %}{% unless link.available %} navigation__link-list-item--unavailable{% endunless %}">
+          <a class="navigation__link-list-link{% if current_url == link.url %} navigation__link-list-link--active{% endif %}" href="{{ link.url | prepend: site.baseurl }}">
+            {{ link.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

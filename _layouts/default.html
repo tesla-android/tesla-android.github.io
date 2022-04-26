@@ -1,0 +1,69 @@
+{% assign current_url = page.url | remove: 'index.html' %}
+
+{% comment %} Generate links to previous and next page. {% endcomment %}
+{% assign nav_items = site.nav.Project | concat: site.nav.Documentation | concat: site.nav.Developers | concat: site.nav.Other %}
+{% assign cutoff_one = site.nav.Users.size %}
+{% assign cutoff_two = cutoff_one | plus: site.nav.Developers.size %}
+{% for link in nav_items %}
+  {% if forloop.index0 == cutoff_one or forloop.index0 == cutoff_two %} {% comment %} If we iterated over all links in a section... {% endcomment %}
+    {% if current_page %}{% break %}{% endif %} {% comment %} Last page; stop looking for "next" link. {% endcomment %}
+    {% assign previous_page = nil %} {% comment %} No "previous" link on first item in category. {% endcomment %}
+  {% endif %}
+  {% unless link.available %}{% continue %}{% endunless %} {% comment %} Skip unavailable links. {% endcomment %}
+  {% if current_page %}
+    {% assign next_page = link %}
+    {% break %}
+  {% endif %}
+  {% if link.url == current_url %}
+    {% assign current_page = link %}
+  {% endif %}
+  {% unless current_page %}
+    {% assign previous_page = link %}
+  {% endunless %}
+{% endfor %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.description %}<meta name="description" content="{{ page.description | strip_newlines }}">{% endif %}
+    <title>{{ current_page.text }} - {{ site.title }}</title>
+    <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <script defer src="{{ "/js/docsearch-2.6.3.min.js" | prepend: site.baseurl }}"></script>
+    <script defer src="{{ "/js/docsearch-config.js" | prepend: site.baseurl }}"></script>
+  </head>
+  <body class="page">
+    <input class="menu-checkbox" id="menu" type="checkbox">
+    <header class="header">
+      <div class="header__container">
+        <label class="header__menu-toggle" for="menu"><span class="hamburger"><span class="hamburger__bar"></span><span class="hamburger__bar"></span><span class="hamburger__bar"></span></span></label>
+        <div class="header__logo">
+            <a class="header__logo-link" href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a>
+        </div>
+        <div class="header__search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="header__search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input class="header__search-field" type="search" placeholder="Search docs">
+        </div>
+      </div>
+    </header>
+    {% include navigation.html %}
+    <div class="content-wrapper">
+      <main class="content">
+        {{ content }}
+      </main>
+      <div class="content__nav">
+        {% if previous_page %}<a class="content__nav-link content__nav-link--prev" href="{{ previous_page.url | prepend: site.baseurl }}">{{ previous_page.text }}</a>{% endif %}
+        {% if next_page %}<a class="content__nav-link content__nav-link--next" href="{{ next_page.url | prepend: site.baseurl }}">{{ next_page.text }}</a>{% endif %}
+      </div>
+      <div class="content__meta">
+        <p>
+          Want to improve the content of this page?
+          <a href="{{ site.git.repository_url }}/issues/new">Report an issue</a> or <a href="{{ site.git.repository_url }}/pulls">Create a pull request</a>
+        </p>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

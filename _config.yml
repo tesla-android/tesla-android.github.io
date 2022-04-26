@@ -1,0 +1,53 @@
+# Site
+title: Tesla Android Project
+description: Bringing Android to Tesla vehicles
+baseurl: /tesla-android.github.io
+permalink: /:title
+
+# Repository
+git:
+  repository_url: https://github.com/tesla-android/tesla-android.github.io
+
+# Navigation
+nav:
+  Project:
+    - text: Home
+      url: /
+      available: true
+    - text: About
+      url: /about
+      available: true
+    - text: How it works?
+      url: /how-it-works
+      available: false
+  Documentation:
+    - text: Hardware requirements
+      url: /hardware-requirements
+      available: true
+  Developers:
+    - text: Source code
+      url: /source-code
+      available: true
+    - text: Contributions
+      url: /contributions
+      available: true
+  Other:
+    - text: Donations
+      url: /donations
+      available: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Build
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+exclude: ["README.md"]
