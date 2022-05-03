@@ -15,7 +15,7 @@
 |--------|--------|
 | Radiators for Raspberry Pi | The boards need some cooling |
 | Open housing for two Raspberry Pi computers  | Makes cable management easy, allows all the hardware to fit into the center console |
-| CarlinKit CPC200-Autokit | If you intend to use wireless CarPlay or Android Auto |
+| CarlinKit CPC200-Autokit, CPC200-CCPA | If you intend to use wireless CarPlay or Android Auto, for wireless Android Auto order the new model: CPC200-CCPA |
 
 ## Notes
 
