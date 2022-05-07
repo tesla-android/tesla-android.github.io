@@ -19,5 +19,5 @@
 
 ## Notes
 
-First alpha release requires two Raspberry Pi boards to function. That requirement might be droped in the future.
+First alpha release requires two Raspberry Pi boards to function. That requirement might be dropped in the future.
 
