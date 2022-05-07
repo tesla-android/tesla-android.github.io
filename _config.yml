@@ -24,6 +24,9 @@ nav:
     - text: Hardware requirements
       url: /hardware-requirements
       available: true
+    - text: Install guide
+      url: /install-guide
+      available: true
   Developers:
     - text: Source code
       url: /source-code
