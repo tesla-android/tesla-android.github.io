@@ -147,9 +147,13 @@ If you want to use Navigation audio for a longer road trip change Audio Channel(
 
 ### Extras
 
+#### 2012.12.3.2
+
 If you launch the app in the car while in Park the video stream will have much higher quality and framerate then if launched in motion. The screen will stay in higher quality mode until the website is reloaded(even if you drive the car after switching from Park to Drive/Reverse).
 This limitation has been introduced for me in Tesla Software 2022.12.3.2 and I quickly patched this by switching to a MJPEG based solution in case of WebRTC being restricted. This will be addressed in a more elegant solution in next releases.
 
+#### IP address range
 
+For the Flutter app to be accessible in the Tesla Browser I had to use a public IP range. Tesla blocks the IP ranges from [RFC1918](https://tools.ietf.org/html/rfc1918). If that creates any isses for you please provide an alternative IP range [in this discussion](https://github.com/tesla-android/issue-tracker/discussions/4).
 
 
