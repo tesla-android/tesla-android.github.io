@@ -7,7 +7,7 @@ The install guide is divided into two main parts - installing a custom build of 
 ### Android
 
 1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2022.18.1.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.18.1/tesla-android-2022.18.1.zip)
-2. Make sure that both fastboot and adb is installed and accessible from your terminal.
+2. Make sure that both fastboot and adb is installed and accessible from your terminal. Make sure to use a recent version from [https://developer.android.com/studio/releases/platform-tools](https://developer.android.com/studio/releases/platform-tools) if you stumble upon any issues with flashing.
 3. Using Balena Etcher or Raspberry Pi Imager flash an image named: "deploy-sd.img" to your SD Card.
 4. Insert the SD Card into your Raspberry Pi 4, connect a USB mouse as well as a display using HDMI.
 5. Connect the Pi to your computer using a USB-C to USB-A/USB-C cable. You should see a bootloader on your display:
