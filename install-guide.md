@@ -40,7 +40,11 @@ The install guide is divided into two main parts - installing a custom build of 
     fastboot format:ext4 metadata
     fastboot reboot
     ```
-The commands have been tested on macOS and Linux. If you succeeded on Windows please send me a .bat script that works!
+If you are using Windows, to make fastboot find your device you need the Android USB Driver, download it from:  [https://developer.android.com/studio/run/win-usb](https://developer.android.com/studio/run/win-usb)
+After you plug your Raspberry Pi on your computers USB port, it will be shown as "USB download gadget" on the Windows Device Manager and the command "fastboot devices" won't find anything.
+On the Windows Device Manager, right-click the name of the device ("USB download gadget"), and then select Update Driver Software. In the Hardware Update wizard, select Browse my computer for driver software and click Next. Click Browse and then locate the USB driver folder you just downloaded.
+Fastboot should be able to find your Raspberry Pi now.
+
 9. Grab yourself something to drink, it will take a while. You should see progress on the screen while the script is executing:
 <img style="padding: 30px" src="assets/android-setup-flashing.jpg">
 10. The Pi will reboot a few times before the setup is finished. The screen will be black for some time after the script is done executing. After that you should be greeted with an Android setup screen. Don't click on anything yet, there is still something else left to do!
