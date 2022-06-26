@@ -20,12 +20,18 @@ nav:
     - text: How it works?
       url: /how-it-works
       available: false
+    - text: YouTube
+      url: /youtube
+      available: true
   Documentation:
     - text: Hardware requirements
       url: /hardware-requirements
       available: true
     - text: Install guide
       url: /install-guide
+      available: true
+    - text: Release notes
+      url: /release-notes
       available: true
   Developers:
     - text: Source code

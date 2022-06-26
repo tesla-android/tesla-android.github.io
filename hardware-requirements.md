@@ -13,11 +13,11 @@
 
 | Component | Description |
 |--------|--------|
-| Radiators for Raspberry Pi | The boards need some cooling |
+| Argon Mini Fan | Cooling for Raspberry Pi 4, after testing multiple solutions I can only recommend this one.  |
 | Open housing for two Raspberry Pi computers  | Makes cable management easy, allows all the hardware to fit into the center console |
 | CarlinKit CPC200-Autokit, CPC200-CCPA | If you intend to use wireless CarPlay or Android Auto, for wireless Android Auto order the new model: CPC200-CCPA |
 
 ## Notes
 
-First alpha release requires two Raspberry Pi boards to function. That requirement might be dropped in the future.
+First versions require two Raspberry Pi boards in order to function. That requirement might be dropped in the future.
 
