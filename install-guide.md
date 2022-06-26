@@ -18,7 +18,7 @@ This install guide has been updated for version 2022.25.1. If you plan on instal
 6. Using an Ethernet cable connect both your boards together.
 7. Plug your Linux Pi to a power source.
 8. Wait a few minutes for the Linux Pi to boot up for the first time.
-9. Connect your computer to Tesla Android Wi-Fi network.
+9. Connect your computer to Tesla Android Wi-Fi network. The default password is: "changeit"
 10. Using a Terminal of your choice connect to your Linux Pi using SSH:
 ```
 ssh pi@3.3.3.1
