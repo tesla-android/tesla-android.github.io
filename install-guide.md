@@ -10,11 +10,11 @@ This install guide has been updated for version 2022.25.1. If you plan on instal
 
 ### Linux
 
-1. Begin with downloading the newest build of Tesla Android OS from GitHub: [tesla-android-os-2022.15.1.zip](https://github.com/tesla-android/tesla-android-os/releases/download/2022.25.1/tesla-android-os-2022.25.1.zip)
+1. Begin with downloading and unzipping the newest build of Tesla Android OS from GitHub: [tesla-android-os-2022.25.1.zip](https://github.com/tesla-android/tesla-android-os/releases/download/2022.25.1/tesla-android-os-2022.25.1.zip)
 2. Using Balena Etcher or Raspberry Pi Imager flash an image named: "tesla-android-os-{version}.img" to your SD Card. Insert the card into your Pi
-3. Configure your USB LTE stick using your computer. No other setup then saving your PIN is required. Verify if Internet is accessible after unpluging and pluging your device back into your computer.
+3. Configure your USB LTE stick using your computer. No other setup then saving your PIN is required. Verify if Internet is accessible after unpluging and pluging your device back into your computer. Then, connect your USB LTE stick to your Pi that will be used for the Linux system.
 4. Connect the HDMI capture interface to the camera header on your Pi.
-5. Connect the capture interface with a second Pi using an HDMI cable.
+5. Connect the capture interface with a second Pi using an microHDMI to HDMI cable.
 6. Using an Ethernet cable connect both your boards together.
 7. Plug your Linux Pi to a power source.
 8. Wait a few minutes for the Linux Pi to boot up for the first time.
@@ -39,11 +39,11 @@ And update your Wi-Fi password. Make it strong, this network will be available e
 sudo reboot
 ```
 To reboot Linux.
-14. Connect to Wi-Fi once again and start a news SSH session, there is one last step needed to finish the setup later on.
+14. Connect to Wi-Fi once again with your new password (you might need to forget the network first on your computer, since it will try to use the old password by default) and start a new SSH session, there is one last step needed to finish the setup later on.
 
 ### Android
 
-1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2022.15.1.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.25.1/tesla-android-2022.15.1.zip)
+1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2022.15.1.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.25.1/tesla-android-2022.15.1.zip)
 2. Make sure that both fastboot and adb is installed and accessible from your terminal. Make sure to use a recent version from [https://developer.android.com/studio/releases/platform-tools](https://developer.android.com/studio/releases/platform-tools) if you stumble upon any issues with flashing.
 3. Using Balena Etcher or Raspberry Pi Imager flash an image named: "deploy-sd.img" to your SD Card.
 4. Insert the SD Card into your Raspberry Pi 4.
@@ -52,6 +52,11 @@ To reboot Linux.
 Make sure that your computer can power your Raspberry Pi using it's USB ports. USB 3.0 ports are known to work without issues.
 6. Verify that your computer has detected the Pi by typing: "fastboot devices". Example of a correct output:
 <img style="padding: 30px" src="assets/android-setup-fastboot.png">
+#### Note
+If you are using Windows, to make fastboot find your device you need the Android USB Driver, download it from:  [https://developer.android.com/studio/run/win-usb](https://developer.android.com/studio/run/win-usb)
+After you plug your Raspberry Pi on your computers USB port, it will be shown as "USB download gadget" on the Windows Device Manager and the command "fastboot devices" won't find anything.
+On the Windows Device Manager, right-click the name of the device ("USB download gadget"), and then select Update Driver Software. In the Hardware Update wizard, select Browse my computer for driver software and click Next. Click Browse and then locate the USB driver folder you just downloaded.
+Fastboot should be able to find your Raspberry Pi now.
 7. Navigate to a folder that contains an extracted archive with Tesla Android.
 8. Execute commands one by one to install Android:
     ```bash
@@ -78,21 +83,17 @@ Make sure that your computer can power your Raspberry Pi using it's USB ports. U
     fastboot format:ext4 metadata
     fastboot reboot
     ```
-If you are using Windows, to make fastboot find your device you need the Android USB Driver, download it from:  [https://developer.android.com/studio/run/win-usb](https://developer.android.com/studio/run/win-usb)
-After you plug your Raspberry Pi on your computers USB port, it will be shown as "USB download gadget" on the Windows Device Manager and the command "fastboot devices" won't find anything.
-On the Windows Device Manager, right-click the name of the device ("USB download gadget"), and then select Update Driver Software. In the Hardware Update wizard, select Browse my computer for driver software and click Next. Click Browse and then locate the USB driver folder you just downloaded.
-Fastboot should be able to find your Raspberry Pi now.
 
 9. Grab yourself something to drink, it will take a while.
 10. The Pi will reboot a few times before the setup is finished.
 11. You did it, you have successfully installed Android 12L on a Raspberry Pi 4!
-12. Make sute that both the Android and Linux boards are on. Veryfy that the Ethernet connection is alive by checking for blinking lights near the ports.
+12. Make sure that both the Android and Linux boards are on. Verify that the Ethernet connection is alive by checking for blinking lights near the ports.
 15. When connected to Tesla Android Wi-Fi network on your computer open Chrome and naviate to [http://3.3.3.1/admin/](http://3.3.3.1/admin/) Pi-hole admin panel should load:
 <img src="assets/linux-setup-pihole.png">
 There are a lot of cool things you can do here([https://pi-hole.net/](https://pi-hole.net/)), the changes you make here will affect the entire Tesla-Android Wi-Fi network. You can also see DNS queries that your Tesla makes when connected to Wi-Fi if that's something you need. Right now there is only one thing that we need to set here - the static IP address for your Android Pi. You can do it after navigating to the settings menu and selecting the DHCP tab. Under "Static DHCP leases configuration" type in the MAC address of your Android Pi, 3.3.3.50 as an IP address and Android as a hostname:
 <img style="padding: 30px" src="assets/linux-setup-pihole-dhcp.png">
 Remember to save your settings. 
-If you don't know the MAC address of your Android Pi proceed to Android setup section and come back to this step later. You can find you can find it using:
+If you don't know the MAC address of your Android Pi, you can check the above section "Currently active DHCP leases" and find your Android IP MAC address there. There should be two addresses listed: your Android Pi and your computer that you connected via Wi-Fi. Or you can find it by going to SSH session at your Linux Pi and use:
 ```
 cat /etc/pihole/dhcp.leases 
 ```
