@@ -75,7 +75,7 @@ and write it down somewhere. HWaddr is your MAC address, you'll need it to set a
 
 1. Begin with downloading the newest build of Tesla Android OS from GitHub: [tesla-android-os-2022.18.1.zip](https://github.com/tesla-android/tesla-android-os/releases/download/2022.18.1/tesla-android-os-2022.18.1.zip)
 2. Using Balena Etcher or Raspberry Pi Imager flash an image named: "tesla-android-os-{version}.img" to your SD Card. Insert the card into your Pi
-3. Configure your USB LTE stick using your computer. No other setup then saving your PIN is required. Verify if Internet is accessible after unpluging and pluging your device back into your computer.
+3. Configure your USB LTE stick using your computer. No other setup then saving your PIN is required. Verify if Internet is accessible after unplugging and plugging your device back into your computer.
 4. Connect the HDMI capture interface to the camera header on your Pi.
 5. Connect a monitor, keyboard and power to your Pi. The board will boot after a while, it needs to expand the filesystem first. You should see a keyboard selection screen on your PI:
 <img style="padding: 30px" src="assets/linux-setup-keyboard.png">
@@ -105,7 +105,7 @@ sudo reboot
 To reboot Linux. While it's booting up unplug the HDMI and keyboard from the Linux Pi. You won't need that any more.
 13. Connect your Android Pi to the Ethernet port on the Linux Pi. Plug the microHDMI cable to the Android PI and connect it to the capture interface. Power on the other Pi.
 14. Connect to Tesla-Android Wi-Fi network on your computer.
-15. Open Chrome and naviate to [http://3.3.3.1/admin/](http://3.3.3.1/admin/) Pi-hole admin panel should load:
+15. Open Chrome and navigate to [http://3.3.3.1/admin/](http://3.3.3.1/admin/) Pi-hole admin panel should load:
 <img src="assets/linux-setup-pihole.png">
 There are a lot of cool things you can do here([https://pi-hole.net/](https://pi-hole.net/)), the changes you make here will affect the entire Tesla-Android Wi-Fi network. You can also see DNS queries that your Tesla makes when connected to Wi-Fi if that's something you need. Right now there is only one thing that we need to set here - the static IP address for your Android Pi. You can do it after navigating to the settings menu and selecting the DHCP tab. Under "Static DHCP leases configuration" type in the MAC address of your Android Pi, 3.3.3.50 as an IP address and Android as a hostname:
 <img style="padding: 30px" src="assets/linux-setup-pihole-dhcp.png">
@@ -133,7 +133,7 @@ gpu_freq=600
 ```
 Feel free to adjust the preset, this might not be enough if you plan to do some retro console emulation :)
 
-NOTE: Keep in mind that overclocking calls for extra cooling for your Pi. If it starts overheating the performance will be degrated.
+NOTE: Keep in mind that overclocking calls for extra cooling for your Pi. If it starts overheating the performance will be degraded.
 
 
 #### CarPlay
@@ -158,6 +158,6 @@ This limitation has been introduced for me in Tesla Software 2022.12.3.2 and I q
 
 #### IP address range
 
-For the Flutter app to be accessible in the Tesla Browser I had to use a public IP range. Tesla blocks the IP ranges from [RFC1918](https://tools.ietf.org/html/rfc1918). If that creates any isses for you please provide an alternative IP range [in this discussion](https://github.com/tesla-android/issue-tracker/discussions/4).
+For the Flutter app to be accessible in the Tesla Browser I had to use a public IP range. Tesla blocks the IP ranges from [RFC1918](https://tools.ietf.org/html/rfc1918). If that creates any issues for you please provide an alternative IP range [in this discussion](https://github.com/tesla-android/issue-tracker/discussions/4).
 
 
