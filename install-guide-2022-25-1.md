@@ -1,22 +1,16 @@
-## Install guide (2022.27.1)
+## Install guide (2022.25.1)
 
 In the first few releases two Raspberry Pi boards will be used. This configuration allows easier development and testing of new features. This solution is temporary and will be replaced with a single Raspberry Pi 4 based solution. 
 
 The install guide is divided into two main parts - installing a custom build of Android and exposing it to the Tesla touchscreen using Raspbian (Linux).
 
-#### Upgrade from 2022.25.1
-
-If you are currently running version 2022.25.1 you can update by flashing only the Linux Raspberry Pi - there are no changes in the Android image in this release. Remember about changing your Wi-Fi password and adding the DHCP reservation for Android in the web interface after flashing.
-
 #### Note
 
-This install guide has been updated for version 2022.27.1. Older install guides are available below:
-- [Install guide (2022.25.1)](/install-guide-2022-25-1)
-- [Install guide (2022.18.1)](/install-guide-2022-18-1)
+This install guide has been updated for version 2022.25.1. If you plan on installing version 2022.18.1 please navigate to this page: [Install guide (2022.18.1)](/install-guide-2022-18-1)
 
 ### Linux
 
-1. Begin with downloading and unzipping the newest build of Tesla Android OS from GitHub: [tesla-android-os-2022.27.1.zip](https://github.com/tesla-android/tesla-android-os/releases/download/2022.27.1/tesla-android-os-2022.27.1.zip)
+1. Begin with downloading and unzipping the newest build of Tesla Android OS from GitHub: [tesla-android-os-2022.25.1.zip](https://github.com/tesla-android/tesla-android-os/releases/download/2022.25.1/tesla-android-os-2022.25.1.zip)
 2. Using Balena Etcher or Raspberry Pi Imager flash an image named: "tesla-android-os-{version}.img" to your SD Card. Insert the card into your Pi
 3. Configure your USB LTE stick using your computer. No other setup then saving your PIN is required. Verify if Internet is accessible after unpluging and pluging your device back into your computer. Then, connect your USB LTE stick to your Pi that will be used for the Linux system.
 4. Connect the HDMI capture interface to the camera header on your Pi.
@@ -160,10 +154,4 @@ Navigation sounds from CarPlay will be routed via Tesla Browser even when Audio 
 
 For the Flutter app to be accessible in the Tesla Browser I had to use a public IP range. Tesla blocks the IP ranges from [RFC1918](https://tools.ietf.org/html/rfc1918). If that creates any isses for you please provide an alternative IP range [in this discussion](https://github.com/tesla-android/issue-tracker/discussions/4). This issue will be resolved in feature builds.
 
-#### Offline mode
-
-Starting with version 2022.27.1 the LTE modem is not required for Tesla Android to maintain connection with your car.<br>
-Keep in mind that certain online features might not be available in your car as it expects the Wi-Fi network to replace the connectivity provided by Tesla.<br>
-When using the Offline Mode turning off Wi-Fi on your touchscreen or powering off Tesla Android is required for accessing your car with the Tesla Mobile App while parked.<br>
-Tesla Android can still be used to provide internet to your car like in previous build - no extra configuration changes are required.
 

@@ -1,5 +1,32 @@
 ## Release Notes
 
+### Version 2022.27.1
+
+####  Offline Mode
+#####  LTE modem is now optional
+
+Starting with version 2022.27.1 the LTE modem is not required for Tesla Android to maintain connection with your car.
+Keep in mind that certain online features might not be available in your car as it expects the Wi-Fi network to replace the connectivity provided by Tesla.
+When using the Offline Mode turning off Wi-Fi on your touchscreen or powering off Tesla Android is required for accessing your car with the Tesla Mobile App while parked.
+Tesla Android can still be used to provide internet to your car like in previous build - no extra configuration changes are required.
+
+####  Wi-Fi
+#####  Persistent connection with your Tesla
+
+As a result of introducing the new Offline Mode Wi-Fi stability and connection times have been significantly improved.
+If you use the (now optional) LTE modem to get a full Android experience your Wi-Fi with the car won't disconnect when there is no LTE coverage(highways, underground parking etc).
+
+####  Virtual display
+#####  Quality improvements
+
+Video stream quality has been slightly improved after reducing the image compression.
+
+####  Flutter Frontend
+#####  Stability improvements
+
+Flutter Frontend has been updated in order to improve user experience.
+Framework version has been bumped to 3.0.4. Rendering engine has been switched to HTML from CanvasKit due to problems with offline loading in Flutter.
+
 ### Version 2022.25.1
 
 ####  Virtual display
