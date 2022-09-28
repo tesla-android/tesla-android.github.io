@@ -1,5 +1,48 @@
 ## Release Notes
 
+### Version 2022.38.1
+
+#### Single Board stack
+##### Hardware and setup improvements
+
+Tesla Android does not need two Raspberry Pi boards anymore!
+Version 2022.38.1 is based only on Android.
+This marks a significant milestone for the project and greatly lowers the barrier of entry both in terms of cost and ease of setup.
+
+#### Browser Audio
+##### Stability and volume improvements
+
+Version 2022.38.1 brings fixes to the browser audio streaming module.
+The output volume has been adjusted to match Bluetooth music playback when using CarPlay.
+Audio capture service on Android is now a persistent system service that doesn't need to request permissions and automatically restarts on failure.
+Bandwidth consumption has been significantly reduced when the music is not playing.
+
+#### Offline Mode
+##### Support for the Chinese market and bugfixes
+
+Single board stack includes an updated version of the Offline mode introduced in version 2022.27.1. Connectivity is now handled directly within the Android system, Pi-hole is no longer required.
+Thanks to the community input Tesla Android works better in China - version 2022.38.1 includes fixes for connection dropouts due to different API endpoints in this market.
+
+#### Wi-Fi
+##### Hotspot improvements
+
+With Tesla Android Single Board you can now manage your Hotspot settings directly in your Tesla.
+Updating your network name and credentials is now possible in the Android Settings app.
+
+#### Virtual display
+##### Backend improvements and bugfixes
+
+Starting with version 2022.38.1 Tesla Android does not use Ustreamer for video streaming.
+Single board stack uses a modified version of mjpg_streamer built with Android NDK.
+The new solution is modular and was chosen with bringing direct framebuffer capture to Tesla Android in mind.
+Resolution of the virtual display has been updated to match the Tesla Browser viewport introduced with Tesla Version 2022.24.
+
+#### Flutter Frontend
+##### Stability improvements
+
+Flutter Frontend has been updated in order to improve user experience.
+Framework version has been bumped to 3.3.
+
 ### Version 2022.27.1
 
 ####  Offline Mode
