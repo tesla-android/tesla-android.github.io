@@ -104,6 +104,18 @@ Navigation sounds from CarPlay will be routed via Tesla Browser even when Audio 
 
 ### Extras
 
+#### Wi-Fi connectivity after install
+
+If you are not able to connect to Wi-Fi after installing Tesla Android:
+
+1. Leave the board powered on for a few minutes(10, 15) after the first boot (the boot sequence is completed when the Wi-Fi network becomes available)
+2. Reboot the board by unplugging the USB-C cable
+3. Try again
+
+Please make sure that your Raspberry Pi 4 has current EEPROM(firmware)!
+
+If you can't reach 9.9.0.1 after connecting to the network check the video capture card, the web server won't start when there is a problem with the card.
+
 #### Offline mode
 
 Starting with version 2022.27.1 the LTE modem is not required for Tesla Android to maintain connection with your car.<br>
