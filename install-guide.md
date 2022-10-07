@@ -1,6 +1,6 @@
 ## Install guide (2022.38.1)
 
-Version 2022.38.1 is the first release that does not require a secondary Raspberry Pi board running Linux. Given that mostof the software has been either migrated or rewritten from scratch it might take a few builds to improve performance and remove new bugs. Consider trying 2022.27.1 if you are looking for the most consistent performance. 
+Version 2022.38.1 is the first release that does not require a secondary Raspberry Pi board running Linux. Given that most of the software has been either migrated or rewritten from scratch it might take a few builds to improve performance and remove new bugs. Consider trying 2022.27.1 if you are looking for the most consistent performance. 
 
 #### Upgrade from 2022.27.1
 
