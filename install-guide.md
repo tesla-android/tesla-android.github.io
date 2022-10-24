@@ -15,9 +15,10 @@ This install guide has been updated for version 2022.38.1. Older install guides 
 
 ### Setup steps
 
+1. Ensure you have the latest firmware for your raspberry pi by using a separate SD card to load Raspberry Pi OS and [updating the firmware](https://all3dp.com/2/raspberry-pi-4-firmware-update-tutorial/#:~:text=You%20can%20do%20this%20by,your%20Pi's%20software%2C%20firmware%20included).
 1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2022.38.1.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.38.1/tesla-android-2022.38.1.zip)
 2. Make sure that both fastboot and adb is installed and accessible from your terminal. Make sure to use a recent version from [https://developer.android.com/studio/releases/platform-tools](https://developer.android.com/studio/releases/platform-tools) if you stumble upon any issues with flashing.
-3. Using Balena Etcher or Raspberry Pi Imager flash an image named: "deploy-sd.img" to your SD Card.
+3. Using [Raspberry Pi Imager](https://www.raspberrypi.com/software/) flash the image named: `deploy-sd.img` to your SD Card.
 4. Insert the SD Card into your Raspberry Pi 4.
 5. Connect the Pi to your computer using a USB-C to USB-A/USB-C cable.
 #### Note
