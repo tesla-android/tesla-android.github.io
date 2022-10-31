@@ -7,6 +7,6 @@ After six months of work first alpha version has been released. The main objecti
 September 2022 marks another huge milestone for the project - version 2022.38.1 drops the two board requirement. All the essential software required has been migrated to run in the AOSP(Android Open Source Project) ecosystem. Several other bugs have been fixed as well. 
 Hardware simplification helps in reducing both cost and entry barrier for less technical users. 
 
-Everything is now on track towards providing a single image that can be flashed onto a Raspberry Pi easily like any other operating system. 
+October 2022 release dropped the capture card requirement. A single Raspberry Pi is all you need to get Android in your Tesla. This version introduces a new single system image that can be flashed onto a Raspberry Pi easily like any other operating system. 
 
-Next milestones for the project are all about making everything run faster. Hardware acceleration for video encode and decode will help in reducing the CPU load on the Raspberry Pi, achieving this would enable a more consistent performance combined with a decrease in power consumption.
+Next milestones for the project are all about making everything run faster. Hardware acceleration for video encode and decode will help in reducing the CPU load on the Raspberry Pi, achieving this would enable a more consistent performance combined with a decrease in power consumption. Updating the OS to Android 13 and building a version powered by Android Automotive is also on the horizon.

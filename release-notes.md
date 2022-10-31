@@ -1,5 +1,49 @@
 ## Release Notes
 
+---
+
+### Version 2022.44.1
+
+#### Single Board stack
+##### Hardware and setup improvements
+
+Tesla Android does not need the hardware HDMI capture interface anymore. Updated video layer also uses less resources
+
+#### Single system image
+##### Setup improvements
+
+Starting with version 2022.44.1 there is a new way to install Tesla Android.
+New single image setup process that does not need adb or fastboot. This change requires a 64GB(or larger) SD card.",
+
+#### LTE
+##### Fixes for Huawei E3372
+
+Previous release broke support for Huawei E3372. This issue is now resolved.
+
+#### Android platform
+##### Boot time improvements
+
+Version 2022.44.1 includes multiple internal optimisations that allow for your Tesla Android to boot up faster after the car wakes from sleep.
+
+#### Virtual display
+##### Performance and quality improvements
+
+Virtual display resolution has been increased to enable high fidelity Android experience in your Tesla.
+The responsiveness is also improved thanks to internal changes in the video layer.
+
+#### CarPlay
+##### Performance improvements
+
+Improvements in the video layer leave more performance for other components.
+Decoding video stream from CarPlay is faster in version 2022.44.1.
+
+#### Flutter Frontend
+##### Stability improvements
+
+Flutter frameworks has been updated in order to improve user experience.
+
+---
+
 ### Version 2022.38.1
 
 #### Single Board stack
@@ -43,6 +87,8 @@ Resolution of the virtual display has been updated to match the Tesla Browser vi
 Flutter Frontend has been updated in order to improve user experience.
 Framework version has been bumped to 3.3.
 
+---
+
 ### Version 2022.27.1
 
 ####  Offline Mode
@@ -69,6 +115,8 @@ Video stream quality has been slightly improved after reducing the image compres
 
 Flutter Frontend has been updated in order to improve user experience.
 Framework version has been bumped to 3.0.4. Rendering engine has been switched to HTML from CanvasKit due to problems with offline loading in Flutter.
+
+---
 
 ### Version 2022.25.1
 
@@ -129,6 +177,8 @@ Navigation sounds also work, however this feature is active only when Tesla Brow
 #####  Simplified device configuration
 
 Setup process of Tesla Android has been simplified, meaning several steps are no longer needed(obtaining a device identifier for Google Services, switching CarPlay resolution etc).
+
+---
 
 #### Version 2022.18.1
 
