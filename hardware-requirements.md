@@ -1,4 +1,4 @@
-## Hardware requirements (2022.44.1)
+## Hardware requirements (2022.44)
 
 Note: MCU 1 (cars previous to March 2018 without an infotainment upgrade) are not supported, as the built-in browser is out of date and too slow.
 

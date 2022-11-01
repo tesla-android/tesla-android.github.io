@@ -2,7 +2,7 @@
 
 ---
 
-### Version 2022.44.1
+### Version 2022.44.2
 
 #### Single Board stack
 ##### Hardware and setup improvements

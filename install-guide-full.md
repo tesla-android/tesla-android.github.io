@@ -1,6 +1,6 @@
-## Install guide (2022.44.1) - Manual method
+## Install guide (2022.44.2) - Manual method
 
-Version 2022.44.1 is the second release that does not require a secondary Raspberry Pi board running Linux and a first one to drop the capture card requirement.
+Version 2022.44.2 is the second release that does not require a secondary Raspberry Pi board running Linux and a first one to drop the capture card requirement.
 
 #### Upgrade from 2022.38.1
 
@@ -8,7 +8,7 @@ If you are currently running version 2022.38.1 you can update by flashing the ne
 
 #### Note
 
-This install guide has been updated for version 2022.44.1. Older install guides are available below:
+This install guide has been updated for version 2022.44.2. Older install guides are available below:
 - [Install guide (2022.38.1)](/install-guide-2022-38-1)
 - [Install guide (2022.27.1)](/install-guide-2022-27-1)
 - [Install guide (2022.25.1)](/install-guide-2022-25-1)
@@ -16,7 +16,7 @@ This install guide has been updated for version 2022.44.1. Older install guides 
 
 ### Setup steps
 
-1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2022.44.1.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.44.1/tesla-android-2022.44.1.zip)
+1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2022.44.2.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.44.2/tesla-android-2022.44.2.zip)
 2. Make sure that both fastboot and adb is installed and accessible from your terminal. Make sure to use a recent version from [https://developer.android.com/studio/releases/platform-tools](https://developer.android.com/studio/releases/platform-tools) if you stumble upon any issues with flashing.
 3. Using Balena Etcher or Raspberry Pi Imager flash an image named: "deploy-sd.img" to your SD Card.
 4. Insert the SD Card into your Raspberry Pi 4.
