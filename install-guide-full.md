@@ -6,6 +6,8 @@ Version 2022.44.2 is the second release that does not require a secondary Raspbe
 
 If you are currently running version 2022.38.1 you can update by flashing the new Android build onto your primary Raspberry Pi and disconnecting the HDMI capture card.
 
+Make sure to clear the browser data in your car if you experience any problems after updating.
+
 #### Note
 
 This install guide has been updated for version 2022.44.2. Older install guides are available below:
