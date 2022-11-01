@@ -22,7 +22,7 @@ This install guide has been updated for version 2022.44.2. Older install guides 
 
 ### Setup steps
 
-1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2022.44.2-single-image.img.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.44.2/tesla-android-2022.44.2-single-image.img.zip)
+1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2022.44.2-single-image.img.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.44.2/tesla-android-2022.44.2-single-image.img.zip)
 2. Using Raspberry Pi Imager flash an image named: "tesla-android-2022.44.2-single-image.img.zip" to your SD Card. Do not extract the archive, the image is large (this will be reduced in a future update).
 3. Grab yourself something to drink, it will take a while.
 3. Insert the SD Card into your Raspberry Pi 4 and power it on.
