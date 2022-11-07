@@ -13,6 +13,8 @@ If you wish to run the legacy dual board configuration check out this link:
 | Heatsink for Raspberry Pi 4 | Argon Fan or ICE Tower CPU Cooling Fan |
 | Micro SD Card | 64GB or larger |
 
+Find all the recommended equipment on a handy Amazon list [**here**](https://amzn.to/3G4dfey). Some equipment is personal choice, like the heatsink/housing.
+
 ### Optional
 
 | Component | Description |
