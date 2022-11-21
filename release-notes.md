@@ -2,6 +2,56 @@
 
 ---
 
+### 2022.45.1
+
+#### Google Apps
+##### Usability improvements
+
+Version 2022.45.1 brings back Google Play Store and other Google Services that were removed in 2022.25.1.  Device ID registration for Google Play is not longer required. Not all apps can be installed using Google Play Store due to lack of device certification, they need to be installed manually.
+
+#### Android Platform
+##### Stability improvements
+
+Tesla Android system services initialisation has been improved, all components(web server, touchscreen, display etc.) will automatically restart on failure. In previous versions a full system reboot would be needed in this scenario.
+
+#### Virtual display
+##### DRM playback
+
+Version 2022.45.1 fixes DRM video playback and enables access to secure layers that are usually blacked out in screen capture. 
+
+#### CarPlay
+##### Visual improvements
+
+Three row layout for CarPlay is now selected as default.
+
+#### Virtual touchscreen
+##### Stability improvements
+
+Flutter app no longer displays information about virtual touchscreen initialisation, it is irrelevant for the single board stack and should have been removed earlier.
+
+#### Bluetooth
+##### Stability improvements
+
+Restarting the system after disabling Bluetooth is no longer required.
+
+#### Internet access
+##### USB tethering for Android
+
+USB tethering from Android phones is now supported in Tesla Android. No configuration is required to enable this feature. Your Android phone will be detected as an external ethernet interface when you enable tethering.
+
+#### Internet access
+##### LTE modem support
+
+2022.45.1 introduces support for USB network devices using the cdc_ncm driver - it has been validated and works without any additional steps from the user. Experimental changes that might enable support for cdc_mbim and rndis_host drivers are also included. Previous versions supported only the cdc_ether driver. 
+
+#### Internet access
+##### Support for external routers
+
+Tesla Android webserver and other services can now be accessed externally using ethernet. This can be used to access the device in your home network or in the car with an external router.
+
+
+---
+
 ### Version 2022.44.2
 
 #### Single Board stack
