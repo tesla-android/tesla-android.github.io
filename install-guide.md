@@ -22,12 +22,13 @@ This install guide has been updated for version 2022.45.1. Older install guides 
 ### Setup steps
 
 1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2022.45.1-single-image.img.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.45.1/tesla-android-2022.45.1-single-image.img.zip)
-2. Using Raspberry Pi Imager flash an image named: "tesla-android-2022.45.1-single-image.img.zip" to your SD Card. Do not extract the archive, the image is large (this will be reduced in a future update).
-3. Grab yourself something to drink, it will take a while.
-3. Insert the SD Card into your Raspberry Pi 4 and power it on.
+2. Extract the downloaded zip file. The image is about 30 GB large (this will be reduced in a future update).
+3. Using Raspberry Pi Imager flash an image named: "tesla-android-2022.45.1-single-image.img" to your SD Card.
 4. Grab yourself something to drink, it will take a while.
-5. After booting into Android your Pi will start broadcasting it's own Wi-Fi network. The default password is ``changeit``. You can update it anytime using Android system settings.
-6. You did it, you have successfully installed Android 12L on a Raspberry Pi 4!
+5. Insert the SD Card into your Raspberry Pi 4 and power it on.
+6. Grab yourself something to drink, it will take a while.
+7. After booting into Android your Pi will start broadcasting it's own Wi-Fi network. The default password is ``changeit``. You can update it anytime using Android system settings.
+8. You did it, you have successfully installed Android 12L on a Raspberry Pi 4!
 
 You've done it. Deploy it in your Tesla, it's ready :) Place the hardware somewhere near the center console, power using USB ports or a external 12V power supply. After connecting your car to the Wi-Fi make sure to check the: "Remain connected in Drive" checkbox in your Tesla. The URL for the Tesla Android frontend is: ``9.9.0.1``.
 
