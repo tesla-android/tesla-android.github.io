@@ -1,15 +1,14 @@
-## Install guide (2023.4.1) - Manual method
+## Install guide (2022.45.1) - Manual method
 
-#### Upgrade from 2022.45.1
+#### Upgrade from 2022.44.2
 
-If you are currently running version 2022.45.1 you can update by flashing the new Android build onto your Raspberry Pi.
+If you are currently running version 2022.44.2 you can update by flashing the new Android build onto your Raspberry Pi.
 
 Make sure to clear the browser data in your car if you experience any problems after updating.
 
 #### Note
 
-This install guide has been updated for version 2023.4.1. Older install guides are available below:
-- [Install guide (2022.44.2)](/install-guide-2022-45-1)
+This install guide has been updated for version 2022.45.1. Older install guides are available below:
 - [Install guide (2022.44.2)](/install-guide-2022-44)
 - [Install guide (2022.38.1)](/install-guide-2022-38-1)
 - [Install guide (2022.27.1)](/install-guide-2022-27-1)
@@ -18,7 +17,7 @@ This install guide has been updated for version 2023.4.1. Older install guides a
 
 ### Setup steps
 
-1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2023.4.1.zip](https://github.com/tesla-android/android-manifest/releases/download/2023.4.1/tesla-android-2023.4.1.zip)
+1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2022.45.1.zip](https://github.com/tesla-android/android-manifest/releases/download/2022.45.1/tesla-android-2022.45.1.zip)
 2. Make sure that both fastboot and adb is installed and accessible from your terminal. Make sure to use a recent version from [https://developer.android.com/studio/releases/platform-tools](https://developer.android.com/studio/releases/platform-tools) if you stumble upon any issues with flashing.
 3. Using Balena Etcher or Raspberry Pi Imager flash an image named: "deploy-sd.img" to your SD Card.
 4. Insert the SD Card into your Raspberry Pi 4.
@@ -48,8 +47,6 @@ Fastboot should be able to find your Raspberry Pi now.
     fastboot flash boot            boot.img
     fastboot flash vendor_boot     vendor_boot.img
     fastboot flash dtbo_a          boot_dtbo.img
-    fastboot flash vbmeta_a        vbmeta.img
-    fastboot flash vbmeta_system_a vbmeta_system.img
     fastboot erase misc
     fastboot reboot-fastboot
 
@@ -63,11 +60,10 @@ Fastboot should be able to find your Raspberry Pi now.
 
 9. Grab yourself something to drink, it will take a while.
 10. The Pi will reboot a few times before the setup is finished.
-11. You did it, you have successfully installed Android 13 on a Raspberry Pi 4!
+11. You did it, you have successfully installed Android 12L on a Raspberry Pi 4!
 12. After booting into Android your Pi will start broadcasting it's own Wi-Fi network. The default password is ``changeit``. You can update it anytime using Android system settings.
 
 You've done it. Deploy it in your Tesla, it's ready :) Place the hardware somewhere near the center console, power using USB ports or a external 12V power supply. After connecting your car to the Wi-Fi make sure to check the: "Remain connected in Drive" checkbox in your Tesla. The URL for the Tesla Android frontend is: ``9.9.0.1``.
-
 
 ### Optional steps
 
@@ -83,12 +79,19 @@ Playback is allowed even when Drive or Reverse is engaged, meaning that there is
 
 Audio output from Tesla Browser does not pause media playback from Tesla OS or CarPlay.
 
+Not all apps support audio capture, this restriction will be removed in a feature update.
+
 #### CarPlay
 
 Tesla Android comes with an app called AutoKit. It enables Apple CarPlay or Android auto using a dongle from Carlinkit (required for both wireless and wired modes). To ensure it works properly apply recommended configuration:
+- Set framerate to 30fps or 60fps. Tesla Android uses a 60Hz refresh rate, however 60Hz CarPlay is more power hungry.
 - In Advanced Settings section change Audio Channel(Beta) to Bluetooth (That is very important, this option makes it possible to connect your phone directly to the Car. This enables microphone, steering wheel controls, Siri etc).
 
 <img src="assets/carplay-settings.png">
+
+If you find your CarPlay jittery at times apply an overclock to your Android Pi. Android on Raspberry Pi 4 lacks support for hardware accelerated video decoding.
+
+Navigation sounds from CarPlay will be routed via Tesla Browser even when Audio Channel is set to Bluetooth in Autokit. This is a problem with the dongle that has been mitigated by Tesla Android in 2022.25.1. If you can't hear navigation sounds make sure to update the AutoKit app.
 
 ### Extras
 

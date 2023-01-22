@@ -2,6 +2,59 @@
 
 ---
 
+### 2023.4.1
+
+#### Android 13
+##### Stability improvements
+
+The Android version has been updated to 13, and this change improves the stability of Tesla Android. Security patches have also been merged up to October 2022. The Android base for Raspberry Pi used by Tesla Android(Glodroid Project) has also been updated to the newest release, and it comes packed with improvements around the kernel, display drivers, and much more.
+
+The entire Tesla Android codebase has been refactored in order to make feature Android Platform updates easier; this is an essential step towards making the project more maintainable.
+
+#### H264 hardware acceleration
+##### Performance improvements
+
+Version 2022.4.1 adds support for hardware accelerated encoder and decoder for the H264 format. Playback of specific files can contain a small number of artifacts. This is a known issue that will be addressed in the future Tesla Android update. The current implementation of hardware acceleration is based on v4l2_codec2 and will be replaced with an alternative that supports more video formats.
+
+#### Virtual display
+##### Stability improvements
+
+The virtual display has been updated to use WebSockets for transport.
+
+#### Virtual touchscreen
+##### Stability improvements
+
+This version contains a fix for a problem with not being able to process input data after reloading the Flutter App.
+
+#### Audio playback
+##### Stability improvements
+
+The Audio Capture app that used to provide audio from Android to the Browser has been replaced with a new low-level implementation that integrates directly with the Android framework responsible for generating the audio stream before it’s broadcasted to the actual hardware(HDMI, headphone jack, etc.). This new approach brings in a lot of other improvements:
+- Increased audio quality (stereo PCM 48kHz - Lossless Audio)
+- Support for DRM content (streaming services)
+- Support for volume control in Android (available in the Android Settings app)
+
+#### Flutter app
+##### Stability improvements
+
+The Flutter App has been refactored to improve stability. Here are some of the changes:
+- WebSockets handling for Tesla Android services has been improved.
+- Thanks to the new transport layer, the Virtual Display component is now powered by Flutter. This significantly improves stability when compared to the previously used Iframe-based approach.
+- The connectivity state observer component has been introduced. The app will notify you when it wouldn’t be able to access Tesla Android services. This change ensures you will not have to manually reload the app when your car returns from sleep or the hardware itself restarts.
+- Flutter Framework has been updated to version 3.3.10
+
+#### USB tethering for iOS
+##### Connectivity improvements
+
+Version 2023.X.1 adds support for sharing the internet from iOS devices via USB. Connect your phone, enable tethering and accept the USB access permission request on your iPhone.
+
+#### LTE Modem support
+##### Connectivity improvements
+
+This update introduces a new Android system service. The Tesla Android USB Networking Initializer simplifies how USB Modems are initialized and allows the use of per-device configuration scripts. This change resolved issues with some variants of Alcatel devices and added support for more Huawei modems.
+
+---
+
 ### 2022.45.1
 
 #### Google Apps
@@ -48,7 +101,6 @@ USB tethering from Android phones is now supported in Tesla Android. No configur
 ##### Support for external routers
 
 Tesla Android webserver and other services can now be accessed externally using ethernet. This can be used to access the device in your home network or in the car with an external router.
-
 
 ---
 

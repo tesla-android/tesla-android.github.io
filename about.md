@@ -9,4 +9,6 @@ Hardware simplification helps in reducing both cost and entry barrier for less t
 
 October 2022 release dropped the capture card requirement. A single Raspberry Pi is all you need to get Android in your Tesla. This version introduces a new single system image that can be flashed onto a Raspberry Pi easily like any other operating system. 
 
-Next milestones for the project are all about making everything run faster. Hardware acceleration for video encode and decode will help in reducing the CPU load on the Raspberry Pi, achieving this would enable a more consistent performance combined with a decrease in power consumption. Updating the OS to Android 13 and building a version powered by Android Automotive is also on the horizon.
+January 2023, version 2023.4.1 was released. One year after the development of Tesla Android started, the project received one of its most significant updates. Android 13, a new audio module with DRM support, hardware-accelerated H264 video decoding and encoding, support for USB tethering for Android devices, and a lot of other improvements make Tesla Android close to being feature-complete.
+
+The following primary milestone of the project is all about GPS. Future builds of Tesla Android will integrate with your car even further and enable location access to all apps available in the Play Store without needing additional hardware. Other objectives include improvements to hardware-accelerated video playback and support for over-the-air software updates.
