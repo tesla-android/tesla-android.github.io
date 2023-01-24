@@ -1,20 +1,19 @@
-## Install guide (2023.4.2) - Single image method
+## Install guide (2023.4.1.1) - Single image method
 
 #### Manual install
 
 If your SD Card is not at least 64GB you can perform a [manual install](/install-guide-full). Please note that smaller cards will not be supported in newer builds that will add support OTA updates.
 
-#### Upgrade from 2023.4.1.1
+#### Upgrade from 2022.45.1
 
-If you are currently running version 2023.4.1.1 you can update by flashing the new Android build onto your Raspberry Pi. Since this version does not significantly differ from  2022.4.1.1 there is a upgrade path that won't result in wiping all of your userdata. It's harder than a single image install and you can find the instructions on the [manual install](/install-guide-full) page.
+If you are currently running version 2022.45.1 you can update by flashing the new Android build onto your Raspberry Pi.
 
 Make sure to clear the browser data in your car if you experience any problems after updating.
 
 #### Note
 
-This install guide has been updated for version 2023.4.2 Older install guides are available below:
-- [Install guide (2023.4.1.1)](/install-guide-2023-4-1-1)
-- [Install guide (2022.45.1)](/install-guide-2022-45-1)
+This install guide has been updated for version 2023.4.1. Older install guides are available below:
+- [Install guide (2022.44.2)](/install-guide-2022-45-1)
 - [Install guide (2022.44.2)](/install-guide-2022-44)
 - [Install guide (2022.38.1)](/install-guide-2022-38-1)
 - [Install guide (2022.27.1)](/install-guide-2022-27-1)
@@ -23,7 +22,7 @@ This install guide has been updated for version 2023.4.2 Older install guides ar
 
 ### Setup steps
 
-1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2023.4.2-single-image.img.zip](https://github.com/tesla-android/android-manifest/releases/download/2023.4.2/tesla-android-2023.4.2-single-image.img.zip)
+1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2023.4.1.1-single-image.img.zip](https://github.com/tesla-android/android-manifest/releases/download/2023.4.1.1/tesla-android-2023.4.1.1-single-image.img.zip)
 2. Extract the downloaded zip file. The image is about 30 GB large (this will be reduced in a future update).
 3. Using Raspberry Pi Imager flash an image named: "tesla-android-2022.45.1-single-image.img" to your SD Card.
 4. Grab yourself something to drink, it will take a while.
@@ -52,7 +51,6 @@ Audio output from Tesla Browser does not pause media playback from Tesla OS or C
 
 Tesla Android comes with an app called AutoKit. It enables Apple CarPlay or Android auto using a dongle from Carlinkit (required for both wireless and wired modes). To ensure it works properly apply recommended configuration:
 - In Advanced Settings section change Audio Channel(Beta) to Bluetooth (That is very important, this option makes it possible to connect your phone directly to the Car. This enables microphone, steering wheel controls, Siri etc).
-- If you encounter artifacts in CarPlay make sure to set the refresh rate to 30fps.
 
 <img src="assets/carplay-settings.png">
 
