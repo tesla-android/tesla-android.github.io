@@ -1,5 +1,25 @@
 ## Release Notes
 
+### 2023.4.2
+
+#### Virtual display
+##### Performance improvements
+
+Version 2023.4.1 introduced a new transport layer to the virtual display. Unfortunately, it misbehaved in vehicles with Intel MCU, especially those with the Wi-Fi antenna placed outside the car. This version brings back the transport from 2022.45 and keeps other improvements like the connectivity check module.
+
+#### Audio playback
+##### Usability improvements
+
+The previous update introduced volume control in Android. However, default values were around 50%, confusing users. 2022.4.2 resolves this issue and sets the Android system volume to 100%.
+
+#### Flutter App
+##### Performance improvements
+
+Version 2023.4.2 brings several improvements in performance to the Flutter app:
+- Removed fade-in and fade-out transitions from the audio playback component on each buffer flush. This change makes the volume curve consistent.
+- After introducing a workaround for offline PWA support, the rendering engine was changed from HTML to CanvasKit.
+- Reduced the amount of ping/pong frames used by the WebSocket transport for the virtual touchscreen
+
 ---
 
 ### 2023.4.1
