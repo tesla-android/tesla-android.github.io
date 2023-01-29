@@ -16,7 +16,7 @@ In the terminal of your preference. ID of your device should show up afterwards.
 5. Execute:
     ```bash
     adb shell reboot fastboot
-    fastboot flash super  super.img
+    fastboot flash super super.img
     fastboot reboot
     ```
 6. Your Raspberry Pi should boot up after a few minutes. If it doesn't happen perform a full install.
@@ -73,7 +73,7 @@ Fastboot should be able to find your Raspberry Pi now.
 
     # Wait for board to power up in fastboot
 
-    fastboot flash super  super.img
+    fastboot flash super super.img
     fastboot format:ext4 userdata
     fastboot format:ext4 metadata
     fastboot reboot
