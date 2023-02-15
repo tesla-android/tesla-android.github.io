@@ -1,5 +1,59 @@
 ## Release Notes
 
+### 2023.7.1
+
+#### Android Platform
+##### Stability improvements
+
+Android has been updated to Android 13.0.0_r31 with the latest available security patches.
+
+#### H264 hardware acceleration
+##### Stability improvements
+
+Version 2023.7.1 improves the stability of the playback and solves issues with artifacts present in the previous version.
+
+#### H265 hardware acceleration
+##### Usability improvements
+
+This version adds support for hardware-accelerated H265 video playback via ffmpeg_codec2.
+          
+#### Software audio decoders
+##### Usability improvements
+2023.7.1 adds software audio decoders exposed by ffmpeg_codec2 for the following file formats:
+- aac  
+- ac3  
+- alac  
+- flac  
+- mp2 
+- mp3  
+- vorbis 
+
+Most of the formats were previously supported by software decoders included with Android. The ffmpeg-powered replacements tend to consume fewer CPU resources.      
+
+#### Software video decoders
+##### Usability improvements
+2023.7.1 adds software video decoders exposed by ffmpeg_codec2 for the following file formats:
+- h263 
+- mpeg2 
+- mpeg4  
+- vp8  
+- vp9
+
+Most of the formats were previously supported by software decoders included with Android. The ffmpeg-powered replacements tend to consume fewer CPU resources.   
+
+#### Flutter App
+##### Stability improvements
+Flutter App received various improvements in this update:
+- The framework has been updated to version 3.7.
+- Version ribbon has been repositioned to the upper right corner. 
+- Reverted changes in touchscreen transport that were introduced in 2023.4.1. The previous implementation was more stable. 
+- The reliability of the connectivity checker module was improved by removing the ability to cache static HTML content in Lighttpd. The browser used to cache the health check response for a while after Tesla Android services became unavailable.
+
+#### Audio playback
+##### Stability improvements
+This version increases the audio playback buffer flush interval from 30 to 100 milliseconds with the hope of decreasing stuttering in cases where the MCU is not able to process the data from WebSocket transport in time.
+    
+
 ### 2023.4.2
 
 #### Virtual display

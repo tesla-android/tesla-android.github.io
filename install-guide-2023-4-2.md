@@ -1,13 +1,18 @@
-## Install guide (2023.7.1) - Single image method
+## Install guide (2023.4.2) - Single image method
 
 #### Manual install
 
 If your SD Card is not at least 64GB you can perform a [manual install](/install-guide-full). Please note that smaller cards will not be supported in newer builds that will add support OTA updates.
 
+#### Upgrade from 2023.4.1.1
+
+If you are currently running version 2023.4.1.1 you can update by flashing the new Android build onto your Raspberry Pi. Since this version does not significantly differ from  2022.4.1.1 there is a upgrade path that won't result in wiping all of your userdata. It's harder than a single image install and you can find the instructions on the [manual install](/install-guide-full) page.
+
+Make sure to clear the browser data in your car if you experience any problems after updating.
+
 #### Note
 
-This install guide has been updated for version 2023.7.1 Older install guides are available below:
-- [Install guide (2023.4.2)](/install-guide-2023-4-2)
+This install guide has been updated for version 2023.4.2 Older install guides are available below:
 - [Install guide (2023.4.1.1)](/install-guide-2023-4-1-1)
 - [Install guide (2022.45.1)](/install-guide-2022-45-1)
 - [Install guide (2022.44.2)](/install-guide-2022-44)
@@ -18,7 +23,7 @@ This install guide has been updated for version 2023.7.1 Older install guides ar
 
 ### Setup steps
 
-1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2023.7.1-single-image.img.zip](https://gofile.io/d/Mv8z68)
+1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2023.4.2-single-image.img.zip](https://github.com/tesla-android/android-manifest/releases/download/2023.4.2/tesla-android-2023.4.2-single-image.img.zip)
 2. Extract the downloaded zip file. The image is about 30 GB large (this will be reduced in a future update).
 3. Using Raspberry Pi Imager flash an image named: "tesla-android-2022.45.1-single-image.img" to your SD Card.
 4. Grab yourself something to drink, it will take a while.

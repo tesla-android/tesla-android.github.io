@@ -5,3 +5,5 @@ source 'https://rubygems.org'
 # GitHub Pages Ruby Gem: https://github.com/github/pages-gem
 # Dependency versions: https://pages.github.com/versions/
 gem 'github-pages', group: :jekyll_plugins
+
+gem "webrick", "~> 1.8"

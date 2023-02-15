@@ -1,9 +1,31 @@
-## Install guide (2023.7.1) - Manual method
+## Install guide (2023.4.2) - Manual method
+
+#### Upgrade from 2023.4.1.1
+
+If you are currently running version 2023.4.1.1 you can update by flashing the new Android build onto your Raspberry Pi. Since this version does not significantly there is a upgrade path that won't result in wiping all of your userdata.
+
+#### Upgrade steps
+1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2023.4.2.zip](https://github.com/tesla-android/android-manifest/releases/download/2023.4.2/tesla-android-2023.4.2.zip)
+2. Make sure that both fastboot and adb is installed and accessible from your terminal. Make sure to use a recent version from [https://developer.android.com/studio/releases/platform-tools](https://developer.android.com/studio/releases/platform-tools) if you stumble upon any issues with flashing.
+3. Navigate to a folder that contains an extracted archive with Tesla Android.
+4. Connect your Raspberry Pi to your computer. Wait for the board to boot up and execute:
+    ```bash
+    adb devices
+    ```
+In the terminal of your preference. ID of your device should show up afterwards.
+5. Execute:
+    ```bash
+    adb shell reboot fastboot
+    fastboot flash super super.img
+    fastboot reboot
+    ```
+6. Your Raspberry Pi should boot up after a few minutes. If it doesn't happen perform a full install.
+
+Make sure to clear the browser data in your car if you experience any problems after updating.
 
 #### Note
 
-This install guide has been updated for version 2023.7.1. Older install guides are available below:
-- [Install guide (2023.4.2)](/install-guide-2023-4-2)
+This install guide has been updated for version 2023.4.2. Older install guides are available below:
 - [Install guide (2023.4.1.1)](/install-guide-2023-4-1-1)
 - [Install guide (2022.45.1)](/install-guide-2022-45-1)
 - [Install guide (2022.44.2)](/install-guide-2022-44)
@@ -14,7 +36,7 @@ This install guide has been updated for version 2023.7.1. Older install guides a
 
 ### Setup steps
 
-1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2023.7.1.zip](https://github.com/tesla-android/android-manifest/releases/download/2023.7.1/tesla-android-2023.7.1.zip)
+1. Begin by downloading and unzipping the newest build of Tesla Android from GitHub - [tesla-android-2023.4.2.zip](https://github.com/tesla-android/android-manifest/releases/download/2023.4.2/tesla-android-2023.4.2.zip)
 2. Make sure that both fastboot and adb is installed and accessible from your terminal. Make sure to use a recent version from [https://developer.android.com/studio/releases/platform-tools](https://developer.android.com/studio/releases/platform-tools) if you stumble upon any issues with flashing.
 3. Using Balena Etcher or Raspberry Pi Imager flash an image named: "deploy-sd.img" to your SD Card.
 4. Insert the SD Card into your Raspberry Pi 4.
