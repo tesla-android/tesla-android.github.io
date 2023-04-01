@@ -18,7 +18,7 @@ This install guide has been updated for version 2023.7.1 Older install guides ar
 
 ### Setup steps
 
-1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2023.7.1-single-image.img.zip](https://gofile.io/d/Mv8z68)
+1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2023.7.1-single-image.img.zip](https://gofile.io/d/nbDdtc)
 2. Extract the downloaded zip file. The image is about 30 GB large (this will be reduced in a future update).
 3. Using Raspberry Pi Imager flash an image named: "tesla-android-2022.45.1-single-image.img" to your SD Card.
 4. Grab yourself something to drink, it will take a while.
