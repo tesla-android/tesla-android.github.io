@@ -1,5 +1,92 @@
 ## Release Notes
 
+### 2023.18.1
+
+#### Virtual display
+##### Performance improvements
+
+The virtual display is now hardware accelerated via the V4L2 API. As a result, this solution behaves consistently regardless of CPU usage (gaming, video playback). 
+
+The capture mechanism has also been replaced. The new solution sends data to the browser less frequently if nothing is happening on the display. As a result, overall resource usage of the front end is significantly reduced in typical use. 
+
+Internally the refresh rate of the headless operation mode in drm_hwcomposer is now capped at 30Hz. The SufraceFlinger is not able to provide more frames to the virtual display(buffer allocation related).
+
+System animation duration is now reduced to improve performance. 
+
+Virtual display window scaling has been modified to slightly increase text size in system apps; it makes them more easily readable when driving. 
+
+#### Browser audio
+##### Usability improvements
+
+Version 2023.18.1 adds the ability to control the sound settings in the Flutter app. The feature can be disabled if you intend to use Bluetooth Audio or other peripherals.
+
+#### Virtual touchscreen
+##### Multitouch support
+
+Multitouch support is now available in Tesla Android. The overall stability of the component has been increased.
+
+#### Android Platform
+##### Boot time optimization
+
+Version 2023.18.1 takes ~2/3x less time to boot when compared to other Android 13 releases.
+
+#### Android Platform
+##### Support for OTA updates
+
+Version 2023.18.1 adds support for OTA updates. A/B (Seamless) mechanism ensures a safe installation with a rollback to the previous build in case of failure. The process takes place in the background; you can use Tesla Android when the update is being installed.
+
+Navigate to Settings -> System -> Updater to check update availability in the future.
+
+Updates are not incremental. You can skip a few versions and update directly to the newest build. 
+
+Only online updates are available in this release; connect your Raspberry Pi to your home router with an Ethernet cable to avoid data charges. Each update weighs around 1 GB.
+
+#### Single image install
+##### Usability improvements
+
+The bootloader has been updated to support the single-image install process better. In addition, the filesystem will now expand to take advantage of the entire SD Card on the first boot(similar to how Raspbian behaves). 
+
+Any SD Card over 16GB will work with Tesla Android, but 64GB is recommended. 
+
+The download size has been significantly reduced, and the manual installation procedure has been deprecated and removed from the website. 
+
+#### Bluetooth
+##### Usability improvements
+
+Version 2023.18.1 fixes problems with Bluetooth Low Energy. You can now use wireless game controllers, OBD interfaces, and more. Bluetooth Audio stability is also improved.
+
+#### Android Platform
+##### Stability improvements
+
+Android has been updated to Android 13 release 41 with the latest security patches. The platform is now in sync with the latest GloDroidCommunity AOSP base. All the board-related changes have been sent upstream, and Tesla Android was migrated to a new build mechanism to make future Android platform updates faster.
+
+#### Flutter App
+##### Usability improvements
+
+The has been reorganized to make room for new modules. Tapping the version ribbon takes you to the screen with multiple tabs. One of them is the new Settings module, where you can control the browser audio.
+
+#### Video playback
+##### Performance improvements
+
+Version 2023.18.1 adds AV1 decoding via ffmpeg_codec2. The new component takes advantage of multiple cores and performs better.
+
+#### Connectivity
+##### Usability improvements
+
+Version 2023.18.1 adds support for Huawei(Brovi) E3372-325. The device is available in the European market.
+
+#### Compute Module 4
+##### Hardware improvements
+
+Version 2023.18.1 adds support for the Raspberry Pi Compute Module 4 and was tested with both EMMC(32GB) and SD Card-equipped variants. The external Wi-Fi antenna is selected by default.
+
+#### PWM fan support
+##### Hardware improvements
+
+PWM is now enabled on GPIO 18. Supported coolers will only turn on if necessary. You can change the settings in config.txt on the boot partition of the SDCard.
+
+---
+
 ### 2023.7.1
 
 #### Android Platform
@@ -52,7 +139,8 @@ Flutter App received various improvements in this update:
 #### Audio playback
 ##### Stability improvements
 This version increases the audio playback buffer flush interval from 30 to 100 milliseconds with the hope of decreasing stuttering in cases where the MCU is not able to process the data from WebSocket transport in time.
-    
+ 
+---   
 
 ### 2023.4.2
 
@@ -120,7 +208,7 @@ The Flutter App has been refactored to improve stability. Here are some of the c
 #### USB tethering for iOS
 ##### Connectivity improvements
 
-Version 2023.X.1 adds support for sharing the internet from iOS devices via USB. Connect your phone, enable tethering and accept the USB access permission request on your iPhone.
+Version 2023.18.1 adds support for sharing the internet from iOS devices via USB. Connect your phone, enable tethering and accept the USB access permission request on your iPhone.
 
 #### LTE Modem support
 ##### Connectivity improvements

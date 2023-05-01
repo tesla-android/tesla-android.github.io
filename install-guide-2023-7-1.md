@@ -1,15 +1,26 @@
-## Install guide (2023.18.1)
+## Install guide (2023.7.1) - Single image method
 
-#### Over-the-air updates
+#### Manual install
 
-OTA updates are supported on versions released newer than 2023.18. <br>
-To check for updates navigate to Settings->System->Updater.
+If your SD Card is not at least 64GB you can perform a [manual install](/install-guide-full). Please note that smaller cards will not be supported in newer builds that will add support OTA updates.
+
+#### Note
+
+This install guide has been updated for version 2023.7.1 Older install guides are available below:
+- [Install guide (2023.4.2)](/install-guide-2023-4-2)
+- [Install guide (2023.4.1.1)](/install-guide-2023-4-1-1)
+- [Install guide (2022.45.1)](/install-guide-2022-45-1)
+- [Install guide (2022.44.2)](/install-guide-2022-44)
+- [Install guide (2022.38.1)](/install-guide-2022-38-1)
+- [Install guide (2022.27.1)](/install-guide-2022-27-1)
+- [Install guide (2022.25.1)](/install-guide-2022-25-1)
+- [Install guide (2022.18.1)](/install-guide-2022-18-1)
 
 ### Setup steps
 
-1. Begin by downloading the newest build of Tesla Android from GitHub - [Raspberry Pi 4 releases](https://github.com/tesla-android/android-raspberry-pi/releases). 
-2. Extract the downloaded zip file.
-3. Using Raspberry Pi Imager flash an image named: "tesla-android-xxx-single-image.img" to your SD Card.
+1. Begin by downloading the newest build of Tesla Android from GitHub - [tesla-android-2023.7.1-single-image.img.zip](https://gofile.io/d/nbDdtc)
+2. Extract the downloaded zip file. The image is about 30 GB large (this will be reduced in a future update).
+3. Using Raspberry Pi Imager flash an image named: "tesla-android-2022.45.1-single-image.img" to your SD Card.
 4. Grab yourself something to drink, it will take a while.
 5. Insert the SD Card into your Raspberry Pi 4 and power it on.
 6. Grab yourself something to drink, it will take a while.
@@ -36,6 +47,7 @@ Audio output from Tesla Browser does not pause media playback from Tesla OS or C
 
 Tesla Android comes with an app called AutoKit. It enables Apple CarPlay or Android auto using a dongle from Carlinkit (required for both wireless and wired modes). To ensure it works properly apply recommended configuration:
 - In Advanced Settings section change Audio Channel(Beta) to Bluetooth (That is very important, this option makes it possible to connect your phone directly to the Car. This enables microphone, steering wheel controls, Siri etc).
+- If you encounter artifacts in CarPlay make sure to set the refresh rate to 30fps.
 
 <img src="assets/carplay-settings.png">
 

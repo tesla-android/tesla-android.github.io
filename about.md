@@ -11,4 +11,6 @@ October 2022 release dropped the capture card requirement. A single Raspberry Pi
 
 January 2023, version 2023.4.1 was released. One year after the development of Tesla Android started, the project received one of its most significant updates. Android 13, a new audio module with DRM support, hardware-accelerated H264 video decoding and encoding, support for USB tethering for Android devices, and a lot of other improvements make Tesla Android close to being feature-complete.
 
-The following primary milestone of the project is all about GPS. Future builds of Tesla Android will integrate with your car even further and enable location access to all apps available in the Play Store without needing additional hardware. Other objectives include improvements to hardware-accelerated video playback and support for over-the-air software updates.
+May 2023 version(2023.18.1) brought OTA updates and hardware acceleration to the virtual display component.
+
+The following primary milestone of the project is all about GPS. Future builds of Tesla Android will integrate with your car even further and enable location access to all apps available in the Play Store without needing additional hardware.
