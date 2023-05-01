@@ -9,7 +9,7 @@ To check for updates navigate to Settings->System->Updater.
 
 1. Begin by downloading the newest build of Tesla Android from GitHub - [Raspberry Pi 4 releases](https://github.com/tesla-android/android-raspberry-pi/releases). 
 2. Extract the downloaded zip file.
-3. Using Raspberry Pi Imager flash an image named: "tesla-android-xxx-single-image.img" to your SD Card.
+3. Using Raspberry Pi Imager flash an image named: "TeslaAndroid-XXXX-rpi4-single-image-installer.img.zip" to your SD Card.
 4. Grab yourself something to drink, it will take a while.
 5. Insert the SD Card into your Raspberry Pi 4 and power it on.
 6. Grab yourself something to drink, it will take a while.
