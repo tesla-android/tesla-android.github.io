@@ -10,3 +10,5 @@ Currently donations are only accepted via buymeacoffee or PayPal. If you want to
 <div>
 <a href="https://www.buymeacoffee.com/mgapinski" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="margin:20px; height: 60px !important;width: 217px !important;" ></a>
 </div>
+
+[You can also support Tesla Android by using this referral code when purchasing something from Tesla: Link](https://www.tesla.com/referral/micha721019)

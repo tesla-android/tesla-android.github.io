@@ -1,16 +1,11 @@
-## Hardware requirements (2023.7.1)
+## Hardware requirements (2023.18.1)
 
 Note: MCU 1 (cars previous to March 2018 without an infotainment upgrade) are not supported, as the built-in browser is out of date and too slow.
-
-#### Older versions
-
-If you wish to run the legacy dual board configuration check out this link: 
-- [Hardware requirements (dual board stack)](/hardware-requirements-dual-board)
 
 | Component | Description |
 |--------|--------|
 | Raspberry Pi 4 | Main device for running Android. 4GB of RAM recommended |
-| Heatsink for Raspberry Pi 4 | Argon Fan or ICE Tower CPU Cooling Fan |
+| Heatsink for Raspberry Pi 4 | Argon Fan, ICE Tower CPU Cooling Fan or a PWM solution from Waveshare |
 | Micro SD Card | 64GB or larger |
 
 ### Optional
