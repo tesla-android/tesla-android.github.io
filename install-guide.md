@@ -5,6 +5,10 @@
 OTA updates are supported on versions released newer than 2023.18. <br>
 To check for updates navigate to Settings->System->Updater.
 
+### NOTE
+
+Make sure to clear the browser data in your car after each Tesla Android update to ensure that the latest front-end is used at all times.
+
 ### Setup steps
 
 1. Begin by downloading the newest build of Tesla Android from GitHub - [Raspberry Pi 4 releases](https://github.com/tesla-android/android-raspberry-pi/releases). 
