@@ -1,4 +1,4 @@
-## Install guide (2023.18.1)
+## Install guide (2023.18.2)
 
 #### Over-the-air updates
 

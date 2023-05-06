@@ -1,5 +1,24 @@
 ## Release Notes
 
+### 2023.18.2
+
+#### Virtual display
+##### Performance improvements
+
+Variable refresh rate mechanism introduced in 2023.18.1 is disabled due to its negative impact on the input latency and animation smoothness.
+
+#### Android Platform
+##### Stability improvements
+
+Android has been updated to Android 13 release 43 with the latest security patches.
+
+#### Web server
+##### Usability improvements
+
+Cache settings are now less aggressive. You should not need to clear browser data after every Tesla Android update.
+
+---
+
 ### 2023.18.1
 
 #### Virtual display
