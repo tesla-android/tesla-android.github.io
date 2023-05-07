@@ -1,17 +1,15 @@
-## Install guide (2023.18.1)
+## Install guide (2023.18.2)
 
 #### Over-the-air updates
 
 OTA updates are supported on versions released newer than 2023.18. <br>
 To check for updates navigate to Settings->System->Updater.
 
-### IMPORTANT NOTES
+#### Notes
 
-1) **Make sure to clear the Tesla web browser's cache** before connecting to a new version of Tesla Android's front end web page at IP address 9.9.0.1 . This ensures the proper front-end web app is used at all times because it is remembered in the browser's cached data.
+1) **Make sure to clear the Tesla Browser cache** before connecting to a new version of Tesla Android's web page at IP address 9.9.0.1 . This ensures the proper web app is used at all times.
 
-2) **Raspberry Pi firmware update might be needed** before installing Tesla Android. Verions 2023.18.1 & newer require that the Raspberry Pi firmware be version 2022-04-26 or newer.<br><br> If you have a microHD to HD cable & a USB mouse & keyboard you can connect the pi to a monitor or TV which has HDI port & follow these guides:<br>
-"[Installing Raspberry Pi OS](https://www.raspberrypi.com/software/)"<br>
-"[Raspberry Pi 4 Firmware Update: All You Need to Know](https://all3dp.com/2/raspberry-pi-4-firmware-update-tutorial/)" (checking to see what version firmware your Pi has & how to update if needed)<br><br>If you do not have the HDMI cable or extra USB devices, it is possible to update Pi firmware via a remote methodology which uses SSH. This Reddit [comment](https://www.reddit.com/r/teslaandroid/comments/1354sc3/comment/jiq27dd/) outlines how one user went about it. There are many guides online too, try Google or YouTube for more help.
+2) **Raspberry Pi firmware update might be needed** before installing Tesla Android. Verions 2023.18.1 & newer require that the Raspberry Pi firmware is 2022-04-26 or newer. The updated bootloader is available in Raspberry Pi Imager.<br>
 
 
 ### Setup steps
