@@ -2,7 +2,7 @@
 
 #### Over-the-air updates
 
-OTA updates are supported on versions released newer than 2023.18. <br>
+OTA updates are supported on versions newer than 2023.18. <br>
 To check for updates navigate to Settings->System->Updater.
 
 #### Notes
