@@ -22,6 +22,7 @@ The Virtual Display still needs to fill the entire window, and there might be so
 ##### Routing improvements
 
 You can access your Tesla Android by typing using app.teslaandroid.com instead of typing the IP address. 
+
 The DHCP server is no longer using a public IP range. Tesla Android switched to a Carrier-grade NAT range.
 
 #### Wi-Fi
@@ -30,6 +31,13 @@ The DHCP server is no longer using a public IP range. Tesla Android switched to 
 Version 2023.20.1 add support for 5GHz Wi-Fi. The new future can be manually enabled in Settings and should improve the network speed significantly. 
 
 Users with their own routers can now disable to Tesla Android Wi-Fi network altogether.
+
+#### Flutter App
+##### Stability improvements
+
+Version 2023.20.1 improves the Connectivity Check module. The app is also fully integrated with a self-hosted instance of Sentry(Performance monitoring & Error Tracking). 
+
+The data is anonymised and no fingerprints are captured. Crash logs contain the version of firmware and display resolution. 
 
 ---
 
