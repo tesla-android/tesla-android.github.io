@@ -1,5 +1,38 @@
 ## Release Notes
 
+### 2023.20.1
+
+#### Offline mode
+##### Data usage reduction
+
+Version 2023.20.1 includes an updated offline mode. Your car will not send Telemetry data to Tesla, and the firmware updates will not download using the Tesla Android Wi-Fi network. 
+
+The ability to check if your car runs the latest Tesla firmware is not affected. 
+
+Kudos to Green and Soma for making this possible!
+
+#### Fullscreen launcher
+##### Usability improvements
+
+An early fullscreen frontend is now available at fullscreen.app.teslaandroid.com. 
+
+The Virtual Display still needs to fill the entire window, and there might be some minor UI issues in the Flutter App.
+
+#### Networking
+##### Routing improvements
+
+You can access your Tesla Android by typing using app.teslaandroid.com instead of typing the IP address. 
+The DHCP server is no longer using a public IP range. Tesla Android switched to a Carrier-grade NAT range.
+
+#### Wi-Fi
+##### Performance improvements
+
+Version 2023.20.1 add support for 5GHz Wi-Fi. The new future can be manually enabled in Settings and should improve the network speed significantly. 
+
+Users with their own routers can now disable to Tesla Android Wi-Fi network altogether.
+
+---
+
 ### 2023.18.2
 
 #### Virtual display
