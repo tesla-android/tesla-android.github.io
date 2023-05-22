@@ -7,7 +7,7 @@ To check for updates navigate to Settings->System->Updater.
 
 #### Notes
 
-1) **Make sure to clear the Tesla Browser cache** before connecting to a new version of Tesla Android's web page at ``app.teslaandroid.com``. This ensures the proper web app is used at all times.
+1) **Make sure to clear the Tesla Browser cache** before connecting to a new version of Tesla Android's web page at ``app.teslaandroid.com``. This ensures the proper web app is used at all times. It the web page does not work for you please try ``100.64.255.1``
 
 2) **Raspberry Pi firmware update might be needed** before installing Tesla Android. Verions 2023.18.1 & newer require that the Raspberry Pi firmware is 2022-04-26 or newer. The updated bootloader is available in Raspberry Pi Imager.<br>
 
