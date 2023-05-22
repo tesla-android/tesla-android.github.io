@@ -59,4 +59,4 @@ Tesla Android can still be used to provide internet to your car like in previous
 
 #### Wi-Fi performance
 
-Version 2023.20.1 add support for 5GHz Wi-Fi. The new future can be manually enabled in Settings and should improve the network speed significantly.
+Version 2023.20.1 add support for 5GHz Wi-Fi. The new future can be manually enabled in Settings and should improve the network speed significantly. **If you switch to 5GHz Wi-Fi for Tesla Android please consider changing the CarPlay dongle operation mode to 2.4GHz in order to avoid interference.** 5GHz Wi-Fi might not support all regions due to regional restrictions, please report any potential issues.
