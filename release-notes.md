@@ -1,5 +1,51 @@
 ## Release Notes
 
+### 2023.20.1
+
+#### Offline mode
+##### Configuration & data usage reduction
+
+Version 2023.20.1 includes an updated offline mode that is configurable. You can disable sending Telemetry data to Tesla(important for FSD Beta users), and the firmware updates don't have to download using the Tesla Android Wi-Fi network.
+
+The ability to check if your car runs the latest Tesla firmware is not affected. 
+
+Kudos to Green and Soma for making this possible!
+
+#### Full-Screen mode
+##### Usability improvements
+
+An early fullscreen frontend is now available. You can access it using a new "Go Full-Screen" button in the Flutter App or by navigating to fullscreen.app.teslaandroid.com. 
+
+The Virtual Display still needs to fill the entire window, and there might be some minor UI issues in the Flutter App.
+
+#### Networking
+##### Routing improvements
+
+You can access your Tesla Android by typing using app.teslaandroid.com instead of typing the IP address. 
+
+The DHCP server is no longer using a public IP range. Tesla Android switched to a Carrier-grade NAT range.
+
+#### Android Platform
+##### Boot time optimization
+
+Version 2023.20.1 takes ~10s less to boot when compared to 2023.18. This was made possible by changing the Wi-Fi network initialisation code.
+
+#### Wi-Fi
+##### Performance improvements
+
+Version 2023.20.1 add support for 5GHz Wi-Fi. The new future can be manually enabled in Settings and should improve the network speed significantly. 
+
+Users with their own routers can now disable to Tesla Android Wi-Fi network altogether.
+
+#### Flutter App
+##### Stability improvements
+
+Version 2023.20.1 improves the Connectivity Check module. The app is also fully integrated with a self-hosted instance of Sentry(Performance monitoring & Error Tracking). 
+
+The data is anonymised and no fingerprints are captured. Crash logs contain the version of firmware and display resolution. 
+
+---
+
 ### 2023.18.2
 
 #### Virtual display

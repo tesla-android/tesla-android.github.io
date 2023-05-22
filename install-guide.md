@@ -1,4 +1,4 @@
-## Install guide (2023.18.2)
+## Install guide (2023.20.0)
 
 #### Over-the-air updates
 
@@ -7,7 +7,7 @@ To check for updates navigate to Settings->System->Updater.
 
 #### Notes
 
-1) **Make sure to clear the Tesla Browser cache** before connecting to a new version of Tesla Android's web page at IP address 9.9.0.1 . This ensures the proper web app is used at all times.
+1) **Make sure to clear the Tesla Browser cache** before connecting to a new version of Tesla Android's web page at ``app.teslaandroid.com``. This ensures the proper web app is used at all times.
 
 2) **Raspberry Pi firmware update might be needed** before installing Tesla Android. Verions 2023.18.1 & newer require that the Raspberry Pi firmware is 2022-04-26 or newer. The updated bootloader is available in Raspberry Pi Imager.<br>
 
@@ -23,7 +23,7 @@ To check for updates navigate to Settings->System->Updater.
 7. After booting into Android your Pi will start broadcasting it's own Wi-Fi network. The default password is ``changeit``. You can update it anytime using Android system settings.
 8. You did it, you have successfully installed Android 13 on a Raspberry Pi 4!
 
-You've done it. Deploy it in your Tesla, it's ready :) Place the hardware somewhere near the center console, power using USB ports or a external 12V power supply. After connecting your car to the Wi-Fi make sure to check the: "Remain connected in Drive" checkbox in your Tesla. The URL for the Tesla Android frontend is: ``9.9.0.1``.
+You've done it. Deploy it in your Tesla, it's ready :) Place the hardware somewhere near the center console, power using USB ports or a external 12V power supply. After connecting your car to the Wi-Fi make sure to check the: "Remain connected in Drive" checkbox in your Tesla. The URL for the Tesla Android frontend is: ``app.teslaandroid.com``.
 
 ### Optional steps
 
@@ -55,3 +55,8 @@ Keep in mind that certain online features might not be available in your car as 
 When using the Offline Mode turning off Wi-Fi on your touchscreen or powering off Tesla Android is required for accessing your car with the Tesla Mobile App while parked.<br>
 Tesla Android can still be used to provide internet to your car like in previous build - no extra configuration changes are required.
 
+** Version 2023.20.1 includes an updated offline mode. Your Tesla will not send Telemetry data to Tesla and the firmware updates will not download using the Tesla Android Wi-Fi network. The ability to check if your car runs the latest Tesla firmware is not affected. **
+
+#### Wi-Fi performance
+
+Version 2023.20.1 add support for 5GHz Wi-Fi. The new future can be manually enabled in Settings and should improve the network speed significantly. **If you switch to 5GHz Wi-Fi for Tesla Android please consider changing the CarPlay dongle operation mode to 2.4GHz in order to avoid interference.** 5GHz Wi-Fi might not support all regions due to regional restrictions, please report any potential issues.
