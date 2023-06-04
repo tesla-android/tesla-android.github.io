@@ -1,7 +1,7 @@
 # Site
 title: Tesla Android Project
 description: Bringing Android to Tesla vehicles
-baseurl: /tesla-android.github.io
+baseurl: /
 permalink: /:title
 
 # Repository
