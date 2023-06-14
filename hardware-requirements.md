@@ -15,4 +15,4 @@ Note: MCU 1 (cars previous to March 2018 without an infotainment upgrade) are no
 | Ethernet cable  | You can supply internet to your Tesla Android rig from another router |
 | Open housing for Raspberry Pi 4  | Makes cable management easy, allows all the hardware to fit into the center console |
 | CarlinKit CPC200-Autokit, CPC200-CCPA | If you intend to use CarPlay |
-| Huawei E3372(Europe), Alcatel IK41VE1(Europe), Alcatel IK41UC(North America) | Optional LTE modem, can be replaced with a different model that works on Raspbian out of the box. The modem is required if you plan on using Premium Connectivity features like online routing alongside Tesla Android. |
+| Huawei E3372(global, avoid the -325 "Brovi" variant), ZTE MF833, Alcatel IK41VE1(Europe), Alcatel IK41UC(North America) | Optional LTE modem, can be replaced with a different model that works on Raspbian out of the box. The modem is required if you plan on using Premium Connectivity features like online routing alongside Tesla Android. |
