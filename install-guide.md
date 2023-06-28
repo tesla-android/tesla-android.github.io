@@ -15,13 +15,12 @@ To check for updates navigate to Settings->System->Updater.
 ### Setup steps
 
 1. Begin by downloading the newest build of Tesla Android from GitHub - [Raspberry Pi 4 releases](https://github.com/tesla-android/android-raspberry-pi/releases). 
-2. Extract the downloaded zip file.
-3. Using Raspberry Pi Imager flash an image named: "TeslaAndroid-XXXX-rpi4-single-image-installer.img.zip" to your SD Card.
-4. Grab yourself something to drink, it will take a while.
-5. Insert the SD Card into your Raspberry Pi 4 and power it on.
-6. Grab yourself something to drink, it will take a while.
-7. After booting into Android your Pi will start broadcasting it's own Wi-Fi network. The default password is ``changeit``. You can update it anytime using Android system settings.
-8. You did it, you have successfully installed Android 13 on a Raspberry Pi 4!
+2. Using Raspberry Pi Imager flash an image named: "TeslaAndroid-XXXX-rpi4-single-image-installer.img.zip" to your SD Card.
+3. Grab yourself something to drink, it will take a while.
+4. Insert the SD Card into your Raspberry Pi 4 and power it on.
+5. Grab yourself something to drink, it will take a while.
+6. After booting into Android your Pi will start broadcasting it's own Wi-Fi network. The default password is ``changeit``. You can update it anytime using Android system settings.
+7. You did it, you have successfully installed Android 13 on a Raspberry Pi 4!
 
 You've done it. Deploy it in your Tesla, it's ready :) Place the hardware somewhere near the center console, power using USB ports or a external 12V power supply. After connecting your car to the Wi-Fi make sure to check the: "Remain connected in Drive" checkbox in your Tesla. The URL for the Tesla Android frontend is: ``app.teslaandroid.com``.
 
