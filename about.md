@@ -13,4 +13,4 @@ January 2023, version 2023.4.1 was released. One year after the development of T
 
 May 2023 version(2023.18.1) brought OTA updates and hardware acceleration to the virtual display component.
 
-The following primary milestone of the project is all about GPS. Future builds of Tesla Android will integrate with your car even further and enable location access to all apps available in the Play Store without needing additional hardware.
+GPS and responsive virtual display has been added in August 2023(2023.32.1).
